@@ -1,0 +1,21 @@
+#drop_zone {
+		background-color: #456;
+		height: 200px;
+	}
+
+.file-button {	
+	color: white;
+	background-color: red;
+	padding: 20px;
+	
+	vertical-align: middle;
+}
+
+
+.container {
+	background-color: #789;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
