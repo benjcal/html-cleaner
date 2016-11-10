@@ -35,12 +35,12 @@ function readBlob() {
 
             s = evt.target.result;
 
-            if ( s.replace('ISO-8859-1', 'UTF-8') == s ) {
+            if (s.replace('ISO-8859-1', 'UTF-8') == s) {
                 alert('seems like the file is not ISO-8859-1')
                 return;
             }
 
-            s = s.replace('ISO-8859-1', 'UTF-8'); 
+            s = s.replace('ISO-8859-1', 'UTF-8');
 
             s = s.replace(/\u2014/g, "\u002D"); //&mdash
             s = s.replace(/\u201C/g, "\u0022"); //&ldquo
