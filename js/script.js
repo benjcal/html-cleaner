@@ -20,6 +20,9 @@ function handleDragOver(evt) {
 var dropZone = document.getElementById('drop-zone');
 dropZone.addEventListener('dragover', handleDragOver, false);
 dropZone.addEventListener('drop', handleFileSelect, false);
+dropZone.addEventListener('click', function () {
+    document.getElementById('files').click()
+}, false);
 
 function readBlob() {
 
