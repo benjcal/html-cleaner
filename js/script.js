@@ -49,7 +49,7 @@ function readBlob() {
             s = s.replace(/\u2019/g, "\u0027"); //&rsquo
 
             var blob = new Blob([s], {
-                type: "text/html;charset=utf-8"
+                type: "text/plain;charset=utf-8"
             });
             saveAs(blob, file.name.replace('.html', '-utf.html'));
 
