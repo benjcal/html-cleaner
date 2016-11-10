@@ -22,7 +22,7 @@ dropZone.addEventListener('dragover', handleDragOver, false);
 dropZone.addEventListener('drop', handleFileSelect, false);
 dropZone.addEventListener('click', function () {
     document.getElementById('files').click()
-}, false);
+});
 
 function readBlob() {
 
@@ -39,7 +39,8 @@ function readBlob() {
             s = evt.target.result;
 
             if (s.replace('ISO-8859-1', 'UTF-8') == s) {
-                alert('seems like the file is not ISO-8859-1')
+                document.getElementById('file-name').textContent = 'The file is not an HTML ISO-8859-1';
+                document.getElementById('file-name').style.color = '#fd5959';
                 return;
             }
 
@@ -67,18 +68,22 @@ document.getElementById('files').addEventListener('change', function(e) {
 
     file = document.getElementById('files').files[0];
 
+    document.getElementById('file-name').style.color = '';
     document.getElementById('file-name').textContent = document.getElementById('files').files[0].name;
 })
 
 document.getElementById('read-file').addEventListener('click', function(evt) {
 
     if (!file) {
-        alert('Please select a file!');
+        document.getElementById('file-name').textContent = 'Please select a file!';
+        document.getElementById('file-name').style.color = '#fd5959';
+        evt.stopPropagation();
         return;
     }
 
-
+    evt.stopPropagation();
     readBlob();
 
 
 }, false);
+

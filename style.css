@@ -18,18 +18,18 @@ button {
 }
 
 #drop-zone {
-	background-color: #ddd;
+	background-color: #f2f2f2;
 	height: 300px;
 	width: 600px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	
 	margin: auto;
 	border-radius: 10px;
 	border: solid 2px rgba(0, 0, 0, 0.2);
 	transition: 0.3s all ease;
 	box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+	cursor: pointer;
 }
 
 #drop-zone p {
@@ -39,17 +39,8 @@ button {
 	margin: 0;
 }
 
-#file-name {
-	color: rgba(0, 0, 0, 0.2) !important;
-	font-weight: 700;
-	font-size: 18px;
-	border: dashed 3px rgba(0, 0, 0, 0.2);
-	border-radius: 10px;
-	margin: 20px;
-}
-
 #drop-zone:hover {
-	background-color: #f2f2f2;
+	background-color: #ddd;
 }
 
 
@@ -72,7 +63,12 @@ button {
 
 #file-name {
 	padding: 10px 20px;
-	color: #fff;
+	color: rgba(0, 0, 0, 0.2);
+	font-weight: 700;
+	font-size: 18px;
+	border: dashed 3px rgba(0, 0, 0, 0.2);
+	border-radius: 10px;
+	margin: 20px;
 }
 
 .container {
