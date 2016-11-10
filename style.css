@@ -1,21 +1,64 @@
-#drop_zone {
-		background-color: #456;
-		height: 200px;
-	}
+body {
+	font-family: sans-serif;
+	text-align: center;
+	font-size: 14px;
+	background-color: #eee;
+}
+
+button {
+	border: inherit;
+	font-size: inherit;
+}
+
+#drop-zone {
+	background-color: #607D8B;
+	height: 400px;
+	width: 800px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	color: #bbb;
+	margin: auto;
+	border-radius: 10px;
+	border: 4px solid #aaa;
+}
+
+#drop-zone:dragover {
+	color: white;
+}
+
 
 .file-button {	
 	color: white;
-	background-color: red;
-	padding: 20px;
-	
+	background-color: #2196F3;
+	border-radius: 10px;
+	padding: 10px;
 	vertical-align: middle;
+	transition: 0.3s all ease;
+	margin: 10px;
+}
+
+.file-button:hover {
+	background-color: #54b3ff;
+}
+
+#file-name {
+	padding: 10px;
+	color: #fff;
 }
 
 
 .container {
-	background-color: #789;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+}
+
+.convert {
+	background-color: #4CAF50;
+}
+
+.convert:hover {
+	background-color: #78d27c;
 }
